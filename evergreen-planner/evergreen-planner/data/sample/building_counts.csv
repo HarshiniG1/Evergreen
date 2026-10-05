@@ -1,0 +1,8 @@
+# SAMPLE DATA - FAKE counts. Replace with the real per-building lists when received.
+building,model,category,count
+SMPA,SAMPLE-MODEL-X1,5,120
+SMPA,SAMPLE-MODEL-Y2,3,40
+SMPB,SAMPLE-MODEL-X1,5,30
+SMPB,SAMPLE-MODEL-Y2,3,200
+SMPC,SAMPLE-MODEL-Z3,4,80
+SMPC,SAMPLE-MODEL-X1,5,10

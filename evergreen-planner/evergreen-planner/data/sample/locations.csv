@@ -1,0 +1,17 @@
+# SAMPLE DATA - FAKE buildings (SMPA/SMPB/SMPC) and FAKE x/y in metres. NOT real uOttawa data.
+node_id,building,floor,kind,x_m,y_m
+SMPA-ENT,SMPA,1,entrance,0,0
+SMPA-C1,SMPA,1,corridor,20,0
+SMPA 101,SMPA,1,room,20,10
+SMPA 102,SMPA,1,room,35,10
+SMPA-ST1,SMPA,1,stairs,40,0
+SMPA-ST2,SMPA,2,stairs,40,0
+SMPA-C2,SMPA,2,corridor,20,0
+SMPA 201,SMPA,2,room,20,10
+SMPA 202,SMPA,2,room,35,10
+SMPB-ENT,SMPB,1,entrance,0,0
+SMPB-C1,SMPB,1,corridor,15,0
+SMPB 1140,SMPB,1,room,15,12
+SMPB 1150,SMPB,1,room,30,12
+SMPC-ENT,SMPC,1,entrance,0,0
+SMPC 105,SMPC,1,room,10,8
