@@ -1,0 +1,16 @@
+# SAMPLE DATA - FAKE connections. Leave distance_m blank to compute it from x_m/y_m.
+source,target,kind,distance_m
+SMPA-ENT,SMPA-C1,corridor,
+SMPA-C1,SMPA 101,door,
+SMPA-C1,SMPA 102,door,
+SMPA-C1,SMPA-ST1,corridor,
+SMPA-ST1,SMPA-ST2,stairs,
+SMPA-ST2,SMPA-C2,corridor,
+SMPA-C2,SMPA 201,door,
+SMPA-C2,SMPA 202,door,
+SMPB-ENT,SMPB-C1,corridor,
+SMPB-C1,SMPB 1140,door,
+SMPB-C1,SMPB 1150,door,
+SMPC-ENT,SMPC 105,door,
+SMPA-ENT,SMPB-ENT,outdoor,150
+SMPB-ENT,SMPC-ENT,outdoor,200
