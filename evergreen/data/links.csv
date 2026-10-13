@@ -1,0 +1,17 @@
+id,source,target,meters,fixed_seconds,kind,accessible,enabled,label
+W1,MOR:F0,MRN:F0,320,15,walk,1,1,Chemin extérieur A — exemple
+W2,MRN:F0,SITE:F0,450,20,walk,1,1,Chemin extérieur B — exemple
+W3,MOR:F0,SITE:F0,600,10,walk,1,1,Chemin extérieur C — exemple
+W4,MOR:F0,MRN:F0,250,0,walk,0,1,Raccourci avec marches — exemple
+E1,MOR:F0,MOR:F1,4,40,elevator,1,1,Ascenseur MOR — attente + trajet
+E2,MOR:F0,MOR:F2,8,55,elevator,1,1,Ascenseur MOR — attente + trajet
+E3,MRN:F0,MRN:F1,4,65,elevator,1,1,Ascenseur MRN — attente + trajet
+E4,MRN:F0,MRN:F3,12,95,elevator,1,1,Ascenseur MRN — attente + trajet
+E5,SITE:F0,SITE:F1,4,30,elevator,1,1,Ascenseur SITE — attente + trajet
+E6,SITE:F0,SITE:F2,8,45,elevator,1,1,Ascenseur SITE — attente + trajet
+S1,MOR:F0,MOR:F1,12,20,stairs,0,1,Escalier MOR
+S2,MOR:F1,MOR:F2,12,20,stairs,0,1,Escalier MOR
+S3,MRN:F0,MRN:F1,12,20,stairs,0,1,Escalier MRN
+S4,MRN:F1,MRN:F3,24,40,stairs,0,1,Escalier MRN
+S5,SITE:F0,SITE:F1,12,20,stairs,0,1,Escalier SITE
+S6,SITE:F1,SITE:F2,12,20,stairs,0,1,Escalier SITE

@@ -1,0 +1,7 @@
+{
+  "name": "Evergreen • Python",
+  "image": "mcr.microsoft.com/devcontainers/python:1-3.12-bookworm",
+  "forwardPorts": [8000],
+  "portsAttributes": {"8000": {"label": "Evergreen demo", "onAutoForward": "openBrowser"}},
+  "postStartCommand": "nohup python server.py > /tmp/evergreen-server.log 2>&1 &"
+}

@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Evergreen | Campus Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="brand">E<span>↗</span></div>
+  <div>
+    <small>University of Ottawa</small>
+    <h1>Evergreen <span>Campus planner</span></h1>
+  </div>
+  <button id="reload">Reload data</button>
+</header>
+
+<main>
+  <aside>
+    <div class="card">
+      <div class="eyebrow">01 / ROOM-TO-ROOM ROUTE</div>
+      <h2>Find the best route.</h2>
+      <p>
+        Automatically find the fastest cart-accessible route,
+        including corridors and elevators.
+      </p>
+
+      <label>
+        From
+        <select id="source"></select>
+      </label>
+
+      <label>
+        To
+        <select id="target"></select>
+      </label>
+
+      <button class="primary" id="route">Find route →</button>
+      <div id="route-result" aria-live="polite"></div>
+    </div>
+
+    <div class="card">
+      <div class="eyebrow">02 / COMPUTER CONSOLIDATION</div>
+      <h2>Group computers by category.</h2>
+      <p>
+        Suggest transfers based on each building’s target category,
+        available computers and room capacities.
+      </p>
+
+      <label>
+        Computers per cart
+        <input id="cart" type="number" value="2" min="1" max="20" step="1">
+      </label>
+
+      <button class="primary" id="plan">Generate transfer plan →</button>
+
+      <p class="hint">
+        Cart capacity affects the estimated number of trips.
+        Transfer order must be coordinated separately.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="eyebrow">PLANNING ASSUMPTIONS</div>
+      <details>
+        <summary>View calculation assumptions</summary>
+        <p class="hint">
+          Constant travel speed: 0.8 m/s.
+          Elevator delays come from the route data.
+          Stairs and inaccessible links are excluded.
+        </p>
+        <p class="hint">
+          Transfer estimates include a return after each cart trip
+          and 2 minutes of handling per computer.
+          Installation, testing and the initial trip from the office
+          are excluded.
+        </p>
+      </details>
+    </div>
+  </aside>
+
+  <section class="workspace">
+    <div class="card map-card">
+      <div class="map-head">
+        <div>
+          <div class="eyebrow">CAMPUS OVERVIEW</div>
+          <h2>Buildings, access and transfers.</h2>
+        </div>
+        <span class="pill">Sample campus diagram</span>
+      </div>
+
+      <svg
+        id="map"
+        viewBox="0 0 900 450"
+        role="img"
+        aria-label="Campus diagram showing buildings and routes">
+      </svg>
+
+      <div class="legend">
+        <span>● Building</span>
+        <span>— Accessible path</span>
+        <span>┄ Path with steps</span>
+        <span class="accent">— Selected route</span>
+      </div>
+
+      <div id="building-info"></div>
+    </div>
+
+    <div id="error" role="alert"></div>
+
+    <div class="metrics">
+      <div class="card">
+        <small>INVENTORY</small>
+        <strong id="total">—</strong>
+        <span>computers in the inventory</span>
+      </div>
+      <div class="card">
+        <small>TO MOVE</small>
+        <strong id="moved">—</strong>
+        <span>proposed computer transfers</span>
+      </div>
+      <div class="card">
+        <small>ESTIMATED TRANSFER TIME</small>
+        <strong id="effort">—</strong>
+        <span>round trips and handling</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="map-head">
+        <div>
+          <div class="eyebrow">TRANSFER PLAN</div>
+          <h2>Proposed consolidation</h2>
+        </div>
+        <button id="export" disabled>Export CSV ↓</button>
+      </div>
+
+      <div id="plan-result" aria-live="polite">
+        <p class="empty">
+          Generate a plan to see proposed transfers and quantities.
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="eyebrow">COMPUTER INVENTORY</div>
+      <details>
+        <summary>View inventory by room</summary>
+        <div id="inventory"></div>
+      </details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  Evergreen Campus Planner • Sample data — estimates require field validation.
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
